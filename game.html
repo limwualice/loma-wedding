@@ -1,53 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GAME</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
-    <!--favicon-->
-    <link rel="apple-touch-icon" sizes="180x180" href="wedding_images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="wedding_images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="wedding_images/favicon-16x16.png">
-    <link rel="manifest" href="wedding_images/site.webmanifest">
+        <title>Memory Game</title>
 
-</head>
+        <script src="https://cdn.tailwindcss.com"></script>
 
-<body>
-    <div class="container-invitation">
-
-        <div class="video-section">
-            <a href="rsvp.html" id="phone-button">
-                <p><span>RSVP</span></p><img src="wedding_images/phone.gif">
-            </a>
-            <a href="index.html" id="phone-button">
-                <p><span>INVITATION</span></p><img src="wedding_images/door.gif">
-            </a>
-        </div>
+        
+        <link href="dist/output.css" rel="stylesheet">
+        <link href="game.css" rel="stylesheet">
+        
+        <link href="https://fonts.cdnfonts.com/css/porter-sans-block" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap" rel="stylesheet">
+        
+    </head>
+    <body class="bg-[#084C61] flex pt-[4vh]">
 
 
-        <div class="desert-container">
-            <div id="desert">
-                <h2 id="alert">Press Space to Start the Game</h2>
-                <div class="grid">
-                    <div class="dino"><img src="game_images/us.png" alt=""></div>
-                </div>
+
+      <div class="bg-transparent lg:bg-[#e3b505] w-full sm:h-[6vh] lg:h-[10vh] fixed z-11 outline-black outline-2">
+        <div class="items-center w-full h-full grid grid-cols-2 gap-2">
+      
+            <!-- HOME Button -->
+          <div class="flex justify-center items-center h-full">
+            <div class="bg-[#e3b505] border-black z-20 p-2 h-full flex items-center justify-center border-8 outline-black outline-2">
+              <a class="text-center text-4xl" style="font-family: Porter Sans Block;" href="index.html">INVITATION</a>
             </div>
+          </div>
+      
+          <!-- RSVP Button -->
+          <div class="flex justify-center items-center h-full">
+            <div class="border-8 bg-[#e3b505] border-black p-2 h-full flex items-center justify-center outline-black outline-2">
+              <a class="text-center text-4xl" style="font-family: Porter Sans Block;" href="rsvp.html">RSVP</a>
+            </div>
+          </div>
+      
+        </div>
+      </div>
+
+
+
+      <div class="grid sm:grid-rows-[9fr_1fr] lg:grid-cols-[3fr_1fr] gap-4 w-full pt-[20vh]">
+
+
+        <section class="memory-game w-full h-full grid grid-cols-2 md:grid-cols-4 gap-2">
+          <div class="memory-card custom-flip" data-framework="redfront">
+            <img class="front-face h-full w-full " src="game_img/red_front.svg" alt="red front" />
+            <img class="back-face h-full w-full" src="game_img/card_back.svg" alt="card back" />
+          </div>
+          <div class="memory-card" data-framework="redfront">
+            <img class="front-face h-full w-full " src="game_img/red_front.svg" alt="red front" />
+            <img class="back-face h-full w-full" src="game_img/card_back.svg" alt="card back" />
+          </div>
+
+          
+          <div class="memory-card" data-framework="bluefront">
+            <img class="front-face h-full w-full " src="game_img/blue_front.svg" alt="blue front" />
+            <img class="back-face h-full w-full" src="game_img/card_back.svg" alt="card back" />
+          </div>
+          <div class="memory-card" data-framework="bluefront">
+            <img class="front-face h-full w-full " src="game_img/blue_front.svg" alt="blue front" />
+            <img class="back-face h-full w-full" src="game_img/card_back.svg" alt="card back" />
+          </div>
+      
+          <div class="memory-card" data-framework="greenfront">
+            <img class="front-face h-full w-full " src="game_img/green_front.svg" alt="green front" />
+            <img class="back-face h-full w-full" src="game_img/card_back.svg" alt="card back" />
+          </div>
+          <div class="memory-card" data-framework="greenfront">
+            <img class="front-face h-full w-full " src="game_img/green_front.svg" alt="green front" />
+            <img class="back-face h-full w-full" src="game_img/card_back.svg" alt="card back" />
+          </div>
+      
+          <div class="memory-card" data-framework="yellowfront">
+            <img class="front-face h-full w-full " src="game_img/yellow_front.svg" alt="yellow front" />
+            <img class="back-face h-full w-full" src="game_img/card_back.svg" alt="card back" />
+          </div>
+          <div class="memory-card" data-framework="yellowfront">
+            <img class="front-face h-full w-full " src="game_img/yellow_front.svg" alt="yellow front" />
+            <img class="back-face h-full w-full" src="game_img/card_back.svg" alt="card back" />
+          </div>
+      
+          <div class="memory-card" data-framework="orangefront">
+            <img class="front-face h-full w-full " src="game_img/orange_front.svg" alt="orange front" />
+            <img class="back-face h-full w-full" src="game_img/card_back.svg" alt="card back" />
+          </div>
+          <div class="memory-card" data-framework="orangefront">
+            <img class="front-face h-full w-full " src="game_img/orange_front.svg" alt="orange front" />
+            <img class="back-face h-full w-full" src="game_img/card_back.svg" alt="card back" />
+          </div>
+      
+          <div class="memory-card" data-framework="purplefront">
+            <img class="front-face h-full w-full " src="game_img/purple_front.svg" alt="purple front" />
+            <img class="back-face h-full w-full" src="game_img/card_back.svg" alt="card back" />
+          </div>
+          <div class="memory-card" data-framework="purplefront">
+            <img class="front-face h-full w-full " src="game_img/purple_front.svg" alt="purple front" />
+            <img class="back-face h-full w-full" src="game_img/card_back.svg" alt="card back" />
+          </div>
+        </section>
+
+        <div class="h-[1vh] md:h-auto md:flex items-center justify-center">
+          <a class="bg-[#db504a] text-[clamp(15px,3vw,40px)]" style="font-family:Holtwood One SC" href="game.html">Reset</a>
         </div>
 
 
+      </div>
 
-    </div>
-
-
-
+      
 
 
-    <script src="app.js"></script>
-</body>
-
+        <script src="game.js"></script>
+    </body>
 </html>

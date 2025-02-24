@@ -1,61 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style_wedding.css">
+    <title>RSVP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.cdnfonts.com/css/porter-sans-block" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
-    <title>RSVP</title>
-    <!--favicon-->
-    <link rel="apple-touch-icon" sizes="180x180" href="wedding_images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="wedding_images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="wedding_images/favicon-16x16.png">
-    <link rel="manifest" href="wedding_images/site.webmanifest">
-
-
-
+    <link href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap" rel="stylesheet">
+    
 </head>
-
-<body>
-
-    <div class="container-invitation">
+<body class="bg-[#084C61] flex pt-[4vh]">
 
 
-        <div class="video-section">
 
-            <a href="index.html" id="phone-button">
-                <p><span>INVITE</span></p><img src="wedding_images/door.gif">
-            </a>
-            <a href="game.html" id="phone-button">
-                <p><span>GAME</span></p><img src="wedding_images/GAME.gif">
-            </a>
-
+  <div class="bg-transparent md:bg-[#e3b505] w-full min-h-[4vh] sm:h-[4vh] md:h-[10vh] fixed z-11 outline-black outline-2">
+    <div class="items-center w-full h-full grid grid-cols-2 gap-2">
+  
+      <!-- HOME Button -->
+      <div class="flex justify-center items-center h-full">
+        <div class="border-2 border-black bg-[#e3b505] p-2 h-full flex items-center justify-center">
+          <a class="text-center text-[clamp(15px,3vw,30px)]" style="font-family: Porter Sans Block;" href="index.html">INVITATION</a>
         </div>
-
-        <div class="rsvp">
-            <iframe
-                src="https://docs.google.com/forms/d/e/1FAIpQLSe6bIUCnRZBHZp2Vh_8TkvMFIUUkrMPYK1liPk7nZ6zmoo3mw/viewform?embedded=true"
-                width="640" height="1400" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      </div>
+  
+      <!-- RSVP Button -->
+      <div class="flex justify-center items-center h-full">
+        <div class="border-2 bg-[#e3b505] border-black p-2 h-full flex items-center justify-center">
+          <a class="text-center text-[clamp(15px,3vw,30px)]" style="font-family: Porter Sans Block;" href="game.html">GAME</a>
         </div>
+      </div>
+  
+    </div>
+  </div>
+
+
+  <div class="pt-[15vh] w-full p-5 lg:p-40 mt-0 lg:mt-5">
+    <form class="gform" method="POST" action="https://script.google.com/macros/s/AKfycbwtFZXBlrPQh9zLWjc62imm95HdgOmyYWhUaDRrcq6BiNxS45-PFMWWiWIpcFiXOjP5/exec">
+
+
+      <!-- Name -->
+      <div class="bg-[#DB504A] flex flex-col p-5">
+          <label for="name" class="block text-[#FFC0CB] font-medium" style="font-family: Holtwood One SC">Name</label>
+          <input class="mt-2 w-full max-w-full mx-auto items-center h-auto" type="text" id="name" name="name" required>
+          <!-- <div class="bg-[#DB504A] h-5"></div> -->
+      </div>
+
+      <!-- Will you and yoru guests be attending -->
+
+      <div class="bg-[#DB504A] flex flex-col p-5 mt-8">
+        <label for="attending" class="block text-[#FFC0CB] font-medium" style="font-family: Holtwood One SC">Will you (and your guests) be attending?</label>
+    
+          <!-- YES Option -->
+          <div>
+              <input type="radio" id="attending-yes" name="attending" value="Yes" required>
+              <label for="attending-yes" class="text-[#FFC0CB] font-medium" style="font-family: Holtwood One SC">Yes</label>
+          </div>
+    
+          <!-- NO Option -->
+          <div>
+              <input type="radio" id="attending-no" name="attending" value="No" required>
+              <label for="attending-no" class="text-[#FFC0CB] font-medium" style="font-family: Holtwood One SC">No</label>
+          </div>
+      </div>
+
+      <!-- Additional guests -->
+      <div class="bg-[#DB504A] flex flex-col p-5 mt-8">
+          <label for="guests" class="block text-[#FFC0CB] font-medium" style="font-family: Holtwood One SC">Please list additional guests you're rsvp-ing for</label>
+          <textarea id="guests" name="guests" rows="4" 
+              class="mt-2 w-full max-w-full mx-auto items-center h-auto"></textarea>
+      </div>
 
 
 
+      <!-- Submit Button -->
+      <button type="submit" 
+          class="bg-[#DB504A] flex flex-col p-5 mt-8 hover:bg-[#56a3a6] transition text-[#FFC0CB] font-medium" style="font-family: Holtwood One SC">
+          Submit
+      </button>
 
+      <div style="display:none" class="thankyou_message bg-[#DB504A] mt-3">
+        <!-- You can customize the thankyou message by editing the code below -->
+        <h2 class="text-[#FFC0CB] font-medium" style="font-family: Holtwood One SC">Thank you! &#10083; M & A</h2>
+      </div>
+    </form>
+  </div>
 
-
-
-
-
-
-
-
-
-
-
-
+  <script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script>
 </body>
 
 </html>
+
+
+

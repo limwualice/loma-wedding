@@ -1,95 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style_wedding.css">
-    <title>Wedding Invitation</title>
-    <!-- <a href="secondhome.html" class="button">BACK</a> -->
+    <title>RSVP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.cdnfonts.com/css/porter-sans-block" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
-
-    <!--favicon-->
-    <link rel="apple-touch-icon" sizes="180x180" href="wedding_images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="wedding_images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="wedding_images/favicon-16x16.png">
-    <link rel="manifest" href="wedding_images/site.webmanifest">
-
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Mkrtich + Alice Wedding Invitation">
-    <meta property="og:image" content="https://limwualice.github.io/loma-wedding/wedding_images/invitation1.png">
-    <meta property="og:url" content="https://limwualice.github.io/loma-wedding">
-    <meta property="og:type" content="website">
-
-
+    <link href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap" rel="stylesheet">
+    
 </head>
+<body class="bg-[#084C61] flex">
 
-<body>
 
 
-    <div class="container-invitation">
+    <div class="bg-transparent md:bg-[#e3b505] w-full min-h-[2vh] sm:h-[2vh] md:h-[10vh] fixed z-11 mt-4 outline-black outline-2">
+        <div class="items-center w-full h-full grid grid-cols-2 gap-2">
 
-        <div class="video-section">
+            <!-- HOME Button -->
+            <div class="flex justify-center items-center h-full">
+            <div class="border-2 border-black bg-[#e3b505] p-2 h-full flex items-center justify-center">
+                <a class="text-center text-[clamp(15px,3vw,30px)]" style="font-family: Porter Sans Block;" href="rsvp.html">RSVP</a>
+            </div>
+            </div>
 
-            <a href="rsvp.html" id="phone-button">
-                <p><span>RSVP</span></p><img src="wedding_images/phone.gif">
-            </a>
-            <a href="game.html" id="phone-button">
-                <p><span>GAME</span></p><img src="wedding_images/GAME.gif">
-            </a>
+            <!-- RSVP Button -->
+            <div class="flex justify-center items-center h-full">
+            <div class="border-2 bg-[#e3b505] border-black p-2 h-full flex items-center justify-center">
+                <a class="text-center text-[clamp(15px,3vw,30px)]" style="font-family: Porter Sans Block;" href="game.html">GAME</a>
+            </div>
+            </div>
+
         </div>
+    </div>
 
+    <!-- Main Content -->
+    <div class="w-full">
+        <!-- Full-width content image -->
+        <img src="wedding_images/invitation_1.jpg" alt="Desktop image" class="hidden md:block w-full h-auto mt-4">
+        <img src="wedding_images/invitation_2.jpg" alt="Desktop image" class="hidden md:block w-full h-auto mt-4">
+        <img src="wedding_images/large_invitation_3.jpg" alt="Desktop image" class="hidden md:block w-full h-auto mt-4">
+        <img src="wedding_images/large_invitation_4.jpg" alt="Desktop image" class="hidden md:block w-full h-auto mt-4">
+        <img src="wedding_images/large_invitation_5.jpg" alt="Desktop image" class="hidden md:block w-full h-auto mt-4">
 
-
-        <div class="invitation-images">
-            <img src="wedding_images/invitation_1.jpg" id="invitation1" class="invitation">
-            <img src="wedding_images/invitation_2.jpg" id="invitation2" class="invitation">
-            <img src="wedding_images/large_invitation_3.jpg" id="invitation3" class="invitation">
-            <img src="wedding_images/large_invitation_4.jpg" id="invitation4" class="invitation">
-            <img src="wedding_images/large_invitation_5.jpg" id="invitation5" class="invitation">
-        </div>
-
-
-        <!-- <div class="text-container">
-            <div class="invitation-text">
-                <h2>Event: Wedding</h2>
-                <h3>Wife: Alice &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Husband: Mkrtich</h3>
-
-            </div>
-            <div class="invitation-text">
-                <h2>This serves as an invitation to the wedding of</h2>
-                <h3>Mkrtich Ohanyan & Alice Lim</h3>
-
-            </div>
-            <div class="invitation-text">
-                <h2>Objective: </h2>
-                <h3>Eat a lot, Dance a lot, Have fun</h3>
-            </div>
-            <div class="invitation-text">
-                <h2>Blush Banquet Hall</h2>
-                <h3>10519 victory blvd
-                    north hollywood, ca</h3>
-                <h3>12 october 2025</h3>
-                <h3>6:00 pm PT</h3>
-            </div>
-            <div class="invitation-text">
-                <h2>Response Required By</h2>
-                <h3>12 September 2025</h3>
-            </div>
-        </div> -->
-
+        <!-- Mobile images -->
+        <img src="wedding_images/invitation1.jpeg" alt="Mobile image" class="w-full md:hidden h-auto">
+        <img src="wedding_images/invitation2.jpeg" alt="Mobile image" class="w-full md:hidden h-auto mt-4">
+        <img src="wedding_images/invitation3.jpeg" alt="Mobile image" class="w-full md:hidden h-auto mt-4">
+        <img src="wedding_images/invitation4.jpeg" alt="Mobile image" class="w-full md:hidden h-auto mt-4">
+        <img src="wedding_images/invitation5.jpeg" alt="Mobile image" class="w-full md:hidden h-auto mt-4">
 
     </div>
 
-
-
-
-    <script src="script.js"></script>
-
+    <div class="fixed">
+        <p alt="arrow" class="bg-[#db504a] font-extrabold text-6xl text-[#e3b505] animate-bounce bottom-0 fixed right-0" style="font-family: Holtwood One SC;">&#8595;</p>
+    </div>
 
 
 </body>
-
 </html>
