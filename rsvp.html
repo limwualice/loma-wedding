@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="favicon_io/favicon.ico" type="image/x-icon">
     
 </head>
 <body class="bg-[#084C61] flex pt-[4vh]">
@@ -37,7 +39,7 @@
 
 
   <div class="pt-[15vh] w-full p-5 lg:p-40 mt-0 lg:mt-5">
-    <form class="gform" method="POST" action="https://script.google.com/macros/s/AKfycbwtFZXBlrPQh9zLWjc62imm95HdgOmyYWhUaDRrcq6BiNxS45-PFMWWiWIpcFiXOjP5/exec">
+    <form class="gform" method="POST" action="https://script.google.com/macros/s/AKfycbwR3Dp4MSqa1z49SwIu9r2y7RQ5vIcOesZ9Net2B9nw3fPATxfHPJ3gC0rKZvcau525/exec">
 
 
       <!-- Name -->
@@ -45,6 +47,26 @@
           <label for="name" class="block text-[#FFC0CB] font-medium" style="font-family: Holtwood One SC">Name</label>
           <input class="mt-2 w-full max-w-full mx-auto items-center h-auto" type="text" id="name" name="name" required>
           <!-- <div class="bg-[#DB504A] h-5"></div> -->
+      </div>
+
+       <!-- Additional guests -->
+       <div class="bg-[#DB504A] flex flex-col p-5 mt-8">
+          <label for="number-of-guests" class="block text-[#FFC0CB] font-medium" style="font-family: Holtwood One SC">How many people are you rsvp-ing for (including yourself)?</label>
+          <select name="number-of-guests" id="number-of-guests" required>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+
+
+
       </div>
 
       <!-- Will you and yoru guests be attending -->
@@ -65,6 +87,9 @@
           </div>
       </div>
 
+     
+
+
       <!-- Additional guests -->
       <div class="bg-[#DB504A] flex flex-col p-5 mt-8">
           <label for="guests" class="block text-[#FFC0CB] font-medium" style="font-family: Holtwood One SC">Please list additional guests you're rsvp-ing for</label>
@@ -75,10 +100,16 @@
 
 
       <!-- Submit Button -->
-      <button type="submit" 
-          class="bg-[#DB504A] flex flex-col p-5 mt-8 hover:bg-[#56a3a6] transition text-[#FFC0CB] font-medium" style="font-family: Holtwood One SC">
+      <div class="bg-[#DB504A] flex p-5 mt-8 w-fit space-x-3">
+        <!-- <img src="game_img/blue_front.svg" class="animate-spin size-6" alt="spin"> -->
+        <button type="submit" 
+          class=" hover:bg-[#56a3a6] transition text-[#FFC0CB] font-medium" style="font-family: Holtwood One SC">
           Submit
-      </button>
+        </button>
+
+
+      </div>
+      
 
       <div style="display:none" class="thankyou_message bg-[#DB504A] mt-3">
         <!-- You can customize the thankyou message by editing the code below -->
